@@ -20,17 +20,11 @@ Traditionally, we have observed our systems using a set of siloed, independent t
 
 This siloed technology landscape is often referred to as the “three pillars” of observability: logging, metrics, and (almost never) tracing.
 
-- Logging
+- _Logging_: Recording the individual events that make up a transaction.
 
-Recording the individual events that make up a transaction.
+- _Metrics_: Recording aggregates of events that make up a transaction.
 
-- Metrics
-
-Recording aggregates of events that make up a transaction.
-
-- Tracing
-
-Measuring the latency of operations and identifying performance bottlenecks in a transaction—or something like that. Traditionally, many organizations do not make use of distributed tracing, and many developers are unfamiliar with it.
+- _Tracing_: Measuring the latency of operations and identifying performance bottlenecks in a transaction—or something like that. Traditionally, many organizations do not make use of distributed tracing, and many developers are unfamiliar with it.
 
 We’ve worked with this approach for so long that we don’t often question it. But as we’ll see, the “three pillars” is not a properly structured approach to observability. In fact, the term only describes how certain technologies happened to have been implemented, and it obscures several fundamental truths about how we actually use our tools.
 
