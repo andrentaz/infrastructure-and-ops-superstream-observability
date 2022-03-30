@@ -21,12 +21,15 @@ Traditionally, we have observed our systems using a set of siloed, independent t
 This siloed technology landscape is often referred to as the “three pillars” of observability: logging, metrics, and (almost never) tracing.
 
 - Logging
+
 Recording the individual events that make up a transaction.
 
 - Metrics
+
 Recording aggregates of events that make up a transaction.
 
 - Tracing
+
 Measuring the latency of operations and identifying performance bottlenecks in a transaction—or something like that. Traditionally, many organizations do not make use of distributed tracing, and many developers are unfamiliar with it.
 
 We’ve worked with this approach for so long that we don’t often question it. But as we’ll see, the “three pillars” is not a properly structured approach to observability. In fact, the term only describes how certain technologies happened to have been implemented, and it obscures several fundamental truths about how we actually use our tools.
@@ -264,15 +267,19 @@ We can solve all of the issues listed above by designing an observability system
 Ultimately, computer systems are actually human systems. A cross-cutting concern such as observability interacts with almost every single software component. At the same time, transmitting and processing telemetry can be such a high-volume activity that a large-scale observability system generates its own operational concerns. Providing agency is a fundamental design requirement for an effective observability system.
 
 - _Library authors communicate what their software is doing._
+
 For software libraries that encapsulate critical functionality, such as network and request management, library authors also must manage aspects of the tracing system: injection, extraction, and context propagation.
 
 - _Application owners compose software and manage dependencies._
+
 Application owners choose the components that comprise their application and ensure that they compile into a coherent, functional system. Application owners also write application-level instrumentation, which must interact cleanly with the instrumentation (and context propagation) provided by the library authors.
 
 - _Operators manage the production and transmission of telemetry._
+
 Operators manage the transmission of observability data from applications to responders. They must be able to choose what format the data is in and where it is being sent. While the data is in flight, they must operate the transmission system: managing all of the resources required to buffer, process, and route the data.
 
 - _Responders consume telemetry and generate useful insights._
+
 To do that, responders must understand both the structure and the meaning inherent to the data. (Structure and meaning are described in detail in Chapter 3.) Responders also need to add new and improved analysis tools to their toolbox when they become available.
 
 These roles represent different decision points:
