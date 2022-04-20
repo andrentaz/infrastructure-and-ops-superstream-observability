@@ -93,7 +93,7 @@ eBPF programs can be attached to different events.
 
 ### BCC function names
 
-You might have many many different ebpf programs running and if they were all writing to the I'm Trace that that quickly becomes hard to hard to manage and hard to read. So instead we want to pass data between user space and kernel using what's called an eBPF map. 
+You might have many many different ebpf programs running and if they were all writing to the Trace that that quickly becomes hard to hard to manage and hard to read. So instead we want to pass data between user space and kernel using what's called an eBPF map. 
 
 ```bash
 b = BPF(text="""
@@ -216,9 +216,7 @@ And that means that if we instrument the kernel with eBPF programs, we can be aw
 
 This is a really nice contrast to the sidecar model that typically gets used for instrumenting, whether we're talking about observability or security tooling a lot of it and service mashes. 
 
-![](figure-09.png)
-
-Well, a lot of them are use the sidecar model Nathan Leclair. Did this really great cartoon, I think explaining how the future of sidecars is actually the kernel. So what do we mean by this? 
+![](figure-09.png) 
 
 ## a sidecar has a view across one pod
 
