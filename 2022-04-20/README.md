@@ -1,4 +1,4 @@
-# Welcome and Liz Rice: A Beginner's Guide to eBPF
+# A Beginner's Guide to eBPF by Liz Rice
 
 Today. I'm going to talk about why I'm so excited about it, why I think it's really revolutionising what we can do in terms of tooling for not just networking but also observability and Security in the cloud native space.
 
