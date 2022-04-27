@@ -274,7 +274,7 @@ Sam: You know safeguarding is crashes of your eBPF program is fine to the, make 
 
 Liz: I think the key thing is to think about the, the set of people who should be allowed to manipulate eBPF tooling. They're the same people who should be allowed to install a new kernel, you know, that that is a seriously privileged operation. 
 
-Now, there is a thing called unprivileged eBPF and cutting a long story short. I think the Now, is that unprivileged eBPF was pretty much a mistake and should be turned off. Not all distros today. Have unprivileged eBPF disabled. So I would recommend turning that Knob Off on your kernel. Even if you're not using BPF, it's a bad idea to allow unprivileged eBPF. 
+Now, there is a thing called unprivileged eBPF and cutting a long story short. I think that unprivileged eBPF was pretty much a mistake and should be turned off, not all distros today, have unprivileged eBPF disabled. So I would recommend turning that Knob Off on your kernel. Even if you're not using BPF, it's a bad idea to allow unprivileged eBPF. 
 
 ### Question 2
 
@@ -282,4 +282,4 @@ Sam: Who do you see as being the prime audience for building things on top of eB
 
 Liz: Yeah, it does, rapidly get pretty complex. And when you're working in the kernel, you're dealing with kernel constructs. So although I kind of encourage anybody who's interested. If they want to play with BPF programming. Don't be scared to give it a try because I think experimenting with things is fun. But for real production level tooling, you know, you probably not going To roll it yourself. 
 
-You're probably going to be using tools that other people are working on. I mean, obviously, silly and being one of those, but I'd also mention Falco and pixie that are other eBPF based tools in the CNCF world. Yeah. It's this also, you know, when you start getting into this space you get to fight with the verifier about what's allowed and what isn't allowed. So it's a whole, there's a whole can of worms.
+You're probably going to be using tools that other people are working on. I mention Falco and Pixie that are eBPF based tools in the CNCF world. Yeah. It's this also, you know, when you start getting into this space you get to fight with the verifier about what's allowed and what isn't allowed.
